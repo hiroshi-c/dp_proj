@@ -1,0 +1,187 @@
+---
+title       : Modeling of population growth rate
+subtitle    : All US counties from April 2010 to July 2014
+author      : Hiroshi Ohno
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## 1. Objective and summary
+
+- Population growth is one of fundamental social factors to affect the society.
+ - In general, moderate growth rate is desired for organized development of the society.
+ - Modeling the mechanism of growth rate may help predicting the trend in the future and making political decision to adjust it. (This study does NOT focus on the prediction, though.)
+
+- Summary of modeling result
+ - 35% is explained by demographic data which this study used
+ - 4% is explained by economic data which this study used
+ 
+- I expect much of unexplained part may be explained by some other economic data. Demographic data used was reasonablly detail and accurate while ecnomic data used was very limited.
+
+--- .class #id 
+
+## 2. Methodology
+
+```{r echo=FALSE,warning=FALSE}
+# This block includes all common operations.
+library(reshape2)
+
+asCleanNumeric <- function(x){
+  x <- as.numeric( sub("\\(r[0-9\\.]*\\)", "",  as.character(x)) )
+  return(x)
+}
+```
+
+- Target: Annualized population growth rate from April 2010 to July 2014 (estimated by U.S. Census Bureau)
+```{r echo=FALSE,warning=FALSE}
+PEP2014 <- read.csv("../population2/PEP_2014_PEPANNRES_with_ann.csv", sep=",", quote="\"", header = TRUE)
+PEP2014Columns <- names(PEP2014) %in% c("GEO.id", "GEO.display.label", "resbase42010", "respop72014")
+PEP2014 <- PEP2014[PEP2014Columns]
+colnames(PEP2014) <- c("id", "name", "base20100401",  "population20140701")
+PEP2014NumericColumns <- seq(3, ncol(PEP2014), 1)
+PEP2014[ ,PEP2014NumericColumns] <- apply(PEP2014[ ,PEP2014NumericColumns], 2, asCleanNumeric)
+PEP2014$growthRate <- with(PEP2014, (population20140701 / base20100401) ^ (1/4.25) - 1)
+```
+
+- Input data for demographic aspect: U.S. 2010 Census
+ + Total population, male/female, population in age bands (5 year division), race, number of household, family/non-family, population in a household
+```{r echo=FALSE,warning=FALSE}
+SF1_QTP1 <- read.csv("../demographic2/DEC_10_SF1_QTP1_with_ann.csv", sep=",", quote="\"", header = TRUE)
+QTP1Columns <- names(SF1_QTP1) %in% c("GEO.id", "SUBHD0101_S01", "SUBHD0102_S01",
+                                      "SUBHD0101_S02", "SUBHD0101_S03", "SUBHD0101_S04", "SUBHD0101_S05", "SUBHD0101_S06", "SUBHD0101_S07",
+                                      "SUBHD0101_S08", "SUBHD0101_S09", "SUBHD0101_S10", "SUBHD0101_S11", "SUBHD0101_S12", "SUBHD0101_S13",
+                                      "SUBHD0101_S14", "SUBHD0101_S15", "SUBHD0101_S16", "SUBHD0101_S17", "SUBHD0101_S18", "SUBHD0101_S19", "SUBHD0101_S20")
+SF1_QTP1 <- SF1_QTP1[QTP1Columns]
+colnames(SF1_QTP1) <- c("id", "total.population", "male",
+                        "age0.4", "age5.9", "age10.14", "age15.19", "age20.24", "age25.29",
+                        "age30.34", "age35.39", "age40.44", "age45.49", "age50.54", "age55.59",
+                        "age60.64", "age65.69", "age70.74", "age75.79", "age80.84", "age85.89", "age90.over" )
+QTP1NumericColumns <- seq(2, ncol(SF1_QTP1), 1)
+SF1_QTP1[ ,QTP1NumericColumns] <- apply(SF1_QTP1[ ,QTP1NumericColumns], 2, asCleanNumeric)
+
+SF1_QTP3 <- read.csv("../demographic2/DEC_10_SF1_QTP3_with_ann.csv", sep=",", quote="\"", header = TRUE)
+QTP3Columns <- names(SF1_QTP3) %in% c("GEO.id", "HD01_S03", "HD01_S04", "HD01_S05", "HD01_S10", "HD01_S18", "HD01_S23", "HD01_S24")
+SF1_QTP3 <- SF1_QTP3[QTP3Columns]
+colnames(SF1_QTP3) <- c("id", "rWhite", "rBlack.AfricanAmerican", "rAmericanIndian.AlaskaNative", "rAsian", "rNativeHawaiian.OtherPacificIslander", "rOther", "rMultiple" )
+QTP3NumericColumns <- seq(2, ncol(SF1_QTP3), 1)
+SF1_QTP3[ ,QTP3NumericColumns] <- apply(SF1_QTP3[ ,QTP3NumericColumns], 2, asCleanNumeric)
+
+SF1_QTP11 <- read.csv("../demographic2/DEC_10_SF1_QTP11_with_ann.csv", sep=",", quote="\"", header = TRUE)
+QTP11Columns <- names(SF1_QTP11) %in% c("GEO.id", "HD01_S01", "HD01_S02", "HD01_S11", "HD01_S12",  "HD01_S13", "HD01_S14", "HD01_S15",  "HD01_S16", "HD01_S17")
+SF1_QTP11 <- SF1_QTP11[QTP11Columns]
+colnames(SF1_QTP11) <- c("id", "total.households", "family.households", "h.1person", "h.2person", "h.3person", "h.4person", "h.5person", "h.6person", "h.7person.more")
+QTP11NumericColumns <- seq(2, ncol(SF1_QTP11), 1)
+SF1_QTP11[ ,QTP11NumericColumns] <- apply(SF1_QTP11[ ,QTP11NumericColumns], 2, asCleanNumeric)
+```
+
+- Input data for economic aspect: U.S. 2012 Economic Census
+ + Payroll and number of employees in top level industry cateogries.
+```{r echo=FALSE,warning=FALSE}
+ECN <- read.csv("../economic2/ECN_2012_US_00A1_with_ann.csv", sep=",", quote="\"", header = TRUE)
+
+# This data includes mutliple levels of industry categories. Includes only top level cateogries.
+targetCategory <- function(x){
+  x <- as.character(x)
+  return (x %in% c("22", "31-33", "42", "44-45", "48-49(104)", "51", "52", "53", "54", "56", "61", "62", "71", "72", "81"))
+}
+ECN <- ECN[targetCategory(ECN$NAICS.id), ]
+
+# Filter out rows where OPTAX.id is T(subject to federal income tax) and Y(exempt from federal income tax). Those are subdivisions of A(All).
+ECN <- ECN[!(ECN$OPTAX.id %in% c("T", "Y")), ]
+
+# Filter columns
+ECNColumns <- names(ECN) %in% c("GEO.id", "NAICS.display.label", "PAYANN", "EMP")
+ECN <- ECN[ECNColumns]
+colnames(ECN) <- c("id", "industry", "payroll", "employee")
+ECNNumericColumns <- seq(3, ncol(ECN), 1)
+ECN[ ,ECNNumericColumns] <- apply(ECN[ ,ECNNumericColumns], 2, asCleanNumeric)
+
+# Generate two subtables as the original table is melted format.
+Payroll <- dcast(ECN, id ~ industry, value.var = 'payroll')
+colnames(Payroll) <- lapply(colnames(Payroll), function(x) paste("Pyr.", gsub("[ ,()]", ".", x), sep=""))
+Employee <- dcast(ECN, id ~ industry, value.var = 'employee')
+colnames(Employee) <- lapply(colnames(Employee), function(x) paste("Emp.", gsub("[ ,()]", ".", x), sep=""))
+
+# Many entries are unavailable because the sample count is too small to anonymize individual business. '0' is set for those entries.
+Payroll[is.na(Payroll)] <- 0
+Employee[is.na(Employee)] <- 0
+```
+
+- All data are per county of the United States.
+
+```{r echo=FALSE,warning=FALSE}
+# Concatenate all sub tables into one.
+data1 <- PEP2014[ , c("id", "name", "growthRate")]
+data2 <- merge(data1, SF1_QTP1, by.x="id", by.y="id", all=FALSE)
+data3 <- merge(data2, SF1_QTP3, by.x="id", by.y="id", all=FALSE)
+data4 <- merge(data3, SF1_QTP11, by.x="id", by.y="id", all=FALSE)
+data5 <- merge(data4, Payroll, by.x="id", by.y="Pyr.id", all=FALSE)
+data6 <- merge(data5, Employee, by.x="id", by.y="Emp.id", all=FALSE)
+data <- data6
+```
+
+- Linear regression model
+ + All variables except total population are regularized as per-capita basis.
+```{r echo=FALSE}
+for (c in seq(5, ncol(data), 1)) {
+  data[ , c] <- apply(data[ , c(4, c)], 1, function(x) x[2]/x[1])
+}
+``` 
+ + Excluding two large outliers, which seem to attribute extreme population increment from oil industry boom in North Dakota.
+```{r echo=FALSE}
+outliers <- which(data$name %in% c("McKenzie County, North Dakota", "Williams County, North Dakota"))
+finalData <- data[-outliers, ]
+``` 
+ + Use stepwise selection provided by MASS package to eliminate insignificant variables.
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+library(MASS)
+initialFit <- lm(growthRate ~ . - id - name, data=finalData)
+fit <- stepAIC(initialFit, direction="both")
+``` 
+
+--- .class #id 
+
+## 3. Result
+- Variables having significant t-value (Pr(>|t|) < 0.001)
+ - Total population (positive): larger county tends to grow more
+ - Male (negative): i.e. Female (positive)
+ - Age 10-14, 15-19, 20-24 (negative): this may mean that famlies having those ages have fewer new babies, although oppositve age bands (having positive impact) do not exist.
+ - Age 55-59, 65-69, 70-74, 85-89 (negative)
+ - Black or African American (negative)
+ - Asian, American Indian and Alaskan Native (positive)
+ - Total households, 2-person households (poistive)
+ - Family household, 1-person households, 3-person households (negative)
+ - Empolyee of Finance and insurance (positive)
+ - Payroll of Retail trade and Wholsesale trade (positive)
+ - Employee of Manufacturing (negative)
+
+--- .class #id 
+
+## 4. Error Analysis
+
+```{r echo=FALSE,results='hide'}
+# Hide this as slide space is limited
+summary(fit)$adj.r.squared
+```
+- This model explained about 39% in R squared measure. It would be 35% if we only use demographic data.
+
+```{r echo=FALSE,fig.width=12,fig.height=3}
+layout(matrix(c(1,2,3,4),1,4))
+plot(fit)
+interestingPoints<-finalData[c(1973, 1991, 2003, 317, 529, 202), ]
+```
+- Residuals are similar scale as fitted value, which is aligned with small R-squared.
+- Normal Q-Q plot indicates that this model does not explain enough for higher growth side. Those top 3 outliers are all North Dakota which still seem to come from oil industry boom.
+- Three strong leverage poitns have all extreme attribute. Exluding them may help further generalization of the model. Los Angels (9.8M population, almost twice than next largest county), Kalawao County (90 population, tiny), District of Columbia (large goverment presence)
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+# This block includes the code to generate the data for shiny application.
+saveRDS(fit, file="../shiny/model.rds")
+distribution <- finalData[ , c("id", "growthRate")]
+saveRDS(distribution, file="../shiny/distribution.rds")
+```

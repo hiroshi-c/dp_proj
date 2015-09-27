@@ -1,0 +1,312 @@
+QT-P11
+Households and Families: 2010
+
+NOTE: For information on confidentiality protection, nonsampling error, and definitions, see  http://www.census.gov/prod/cen2010/doc/sf1.pdf.
+
+(r427)	This count has been revised.   
+Revised count: 263,569 Revision date: 02-13-2013
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r219)	This count has been revised.   
+Revised count: 55,684 Revision date: 09-07-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r333)	This count has been revised.   
+Revised count: 158,438 Revision date: 09-06-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r956)	This count has been revised.   
+Revised count: 555 Revision date: 08-02-2013
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r1199)	This count has been revised.   
+Revised count: 11,004 Revision date: 02-28-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r1422)	This count has been revised.   
+Revised count: 223,958 Revision date: 08-02-2013
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r1427)	This count has been revised.   
+Revised count: 263,160 Revision date: 08-02-2013
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r1523)	This count has been revised.   
+Revised count: 266,721 Revision date: 10-16-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r2366)	This count has been revised.   
+Revised count: 867,362 Revision date: 10-18-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r2967)	This count has been revised.   
+Revised count: 103,039 Revision date: 09-07-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r3013)	This count has been revised.   
+Revised count: 271,811 Revision date: 08-26-2013
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r3158)	This count has been revised.   
+Revised count: 376,375 Revision date: 08-22-2013
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r3198)	This count has been revised.   
+Revised count: 3,590 Revision date: 01-30-2014
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r3823)	This count has been revised.   
+Revised count: 316,698 Revision date: 03-21-2013
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r3896)	This count has been revised.   
+Revised count: 249,950 Revision date: 03-22-2013
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r6610)	This count has been revised.   
+Revised count: 702,776 Revision date: 01-09-2013
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r7550)	This count has been revised.   
+Revised count: 166,316 Revision date: 10-09-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r7556)	This count has been revised.   
+Revised count: 190,984 Revision date: 10-09-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r7667)	This count has been revised.   
+Revised count: 246,442 Revision date: 11-30-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r8108)	This count has been revised.   
+Revised count: 24,465 Revision date: 10-18-2013
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r8529)	This count has been revised.   
+Revised count: 545,054 Revision date: 12-03-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r8537)	This count has been revised.   
+Revised count: 34,270 Revision date: 12-03-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r8795)	This count has been revised.   
+Revised count: 94,153 Revision date: 12-03-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r8845)	This count has been revised.   
+Revised count: 86,010 Revision date: 12-03-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r8884)	This count has been revised.   
+Revised count: 32,286 Revision date: 10-10-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r8892)	This count has been revised.   
+Revised count: 208,701 Revision date: 02-19-2013
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r8902)	This count has been revised.   
+Revised count: 18,563 Revision date: 10-10-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r8928)	This count has been revised.   
+Revised count: 307,749 Revision date: 04-27-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r9076)	This count has been revised.   
+Revised count: 9,911 Revision date: 12-05-2013
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r9239)	This count has been revised.   
+Revised count: 41,247 Revision date: 12-09-2013
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r9587)	This count has been revised.   
+Revised count: 216,472 Revision date: 11-19-2013
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r10272)	This count has been revised.   
+Revised count: 391,610 Revision date: 09-20-2013
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r10361)	This count has been revised.   
+Revised count: 23,856 Revision date: 10-22-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r10372)	This count has been revised.   
+Revised count: 68,099 Revision date: 09-20-2013
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r10391)	This count has been revised.   
+Revised count: 55,043 Revision date: 10-22-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r10402)	This count has been revised.   
+Revised count: 70,803 Revision date: 10-22-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+(r10421)	This count has been revised.   
+Revised count: 4,570 Revision date: 10-22-2012
+
+For more information, see  2010 Census Count Question Resolution.
+
+  
+
+
+ 
+X Not applicable.	   
+[1] A household that has at least one member of the household related to the householder by birth, marriage, or  adoption is a "Family household."  Same-sex couple households are included in the family households category if there is at least one additional person related to the householder by birth or adoption.  Same-sex couple households with no relatives of the householder present are tabulated in nonfamily households.  Responses of "same-sex spouse" were edited during processing to "unmarried partner."	   
+[2] "Nonfamily households" consist of people living alone and households which do not have any members related to the householder.	   
+[3] "Families" consist of a householder and one or more other people related to the householder by birth, marriage, or adoption.  They do not include same-sex married couples even if the marriage was performed in a state issuing marriage certificates for same-sex couples.  Same-sex couples are included in the families category if there is at least one additional person related to the householder by birth or adoption.  Responses of "same-sex spouse" were edited during processing to "unmarried partner."  Same-sex couple households with no relatives of the householder present are tabulated in nonfamily households.	 
+
+
+Source: U.S. Census Bureau, 2010 Census.
+
+Summary File 1, Tables P17, P18, P28, P29, P37, P38, and P39.
+

@@ -1,0 +1,106 @@
+EC1200A1
+All sectors: Geographic Area Series: Economy-Wide Key Statistics: 2012
+
+Release Date : 09/17/2015
+
+The data in this file come from separate 2012 Economic Census of the U.S., Economic Census of Island Areas, and Nonemployer Statistics data files released on a flow basis from March 2014 through June 2016. As such, these data are subject to change and will be replaced when updated data are added from more recent data files. See the Table Notes for more information on this and for related additivity and comparability issues. For information on confidentiality protection, sampling error, nonsampling error, and definitions, see Methodology.
+
+For information on economic census geographies, including changes for 2012, see the economic census Help Center.
+
+
+  
+  Table Name 
+  All sectors: Geographic Area Series: Economy-Wide Key Statistics: 2012 
+  
+  
+  Release Schedule 
+  The data in this file are scheduled for release starting in March 2014 and ending in June 2016. 
+  
+  
+  Key Table Information 
+   The data in this file come from separate 2012 Economic Census of the U.S., Economic Census of Island Areas, and Nonemployer Statistics data files released on a flow basis from March 2014 through June 2016. As such, these data are subject to change and will be replaced when updated data are added from more recent data files. Users should be aware that during the release of this consolidated file, data at more detailed NAICS and geographic levels may not add to higher-level totals. However, at the completion of the economic census (once all the component files have been released), the detailed data in this file will add to these totals. 
+  
+  
+  Universe 
+  The universe of this file is all operating establishments with one or more paid employees (employers) as well as all operating establishments with no paid employees (nonemployers). This universe includes all establishments classified in the North American Industry Classification System (NAICS) Codes 21 through 813990. 
+  
+  
+  Geographic Coverage 
+  The data are shown for employer establishments at the US, State, Combined Statistical Area, Metropolitan and Micropolitan Statistical Area, Metropolitan Division, Consolidated City, County (and equivalent), and Economic Place (and equivalent; incorporated and unincorporated) levels for the U.S. and the Island Areas. Data for nonemployer establishments are shown for the U.S. for all levels except Economic Places and only for Puerto Rico for the Island Areas. 
+  
+  
+  Industry Coverage 
+  The data are shown at the 2- through 6-digit NAICS code levels for all economic census sectors and at the 7- and 8-digit NAICS code levels for selected economic census sectors. 
+  
+  
+  Data Items and Other Identifying Records 
+  This file contains data on: 
+    
+    Number of employer establishments 
+    Sales, receipts, revenue, shipments, or value of business done for employer establishments 
+    Annual payroll of employer establishments 
+    Total employment of employer establishments 
+    Number of nonemployer establishments 
+    Receipts for nonemployer establishments 
+    Relative standard errors for the first 4 employer data items (Construction industries only) 
+    Data are also published by Type of Operation or Tax Status for selected sectors. For Wholesale Trade, data are published for Total Wholesale Trade and for Merchant Wholesalers. For the Services sectors, data are published for All Establishments, as well as Taxable and Tax Exempt Establishments. For additional statistics not shown in this file, see the individual data files from the Economic Census of the U.S. Industry, Geographic Area, Subjects, and Summary Series and the Economic Census of Island Areas Geographic Area Series. 
+  
+  
+  Sort Order 
+   Data are presented in ascending geography (GEO_ID) by NAICS code (NAICS2012) by Type of Operation or Tax Status (OPTAX) sequence. 
+  
+  
+  FTP Download 
+  Download the entire table athttp://www2.census.gov/econ2012/EC/sector00/EC1200A1.zip 
+  
+  
+  Contact Information 
+  U.S. Census Bureau, Economic Management Division Dissemination Branch Tel: (301)763-9560 econ.dissemination@census.gov 
+  
+
+
+Q	Revenue not collected at this level of detail for multiestablishment firms
+
+D	Withheld to avoid disclosing data for individual companies; data are included in higher level totals
+
+c	100 to 249 employees
+
+N	Not available or not comparable
+
+b	20 to 99 employees
+
+a	0 to 19 employees
+
+e	250 to 499 employees
+
+f	500 to 999 employees
+
+(053)	Data for this line not included in broader industry totals.
+
+X	Not applicable
+
+(104)	Railroad transportation and U.S. Postal Service are out of scope for the 2012 Economic Census.
+
+g	1,000 to 2,499 employees
+
+S	Withheld because estimate did not meet publication standards.
+
+h	2,500 to 4,999 employees
+
+i	5,000 to 9,999 employees
+
+j	10,000 to 24,999 employees
+
+l	50,000 to 99,999 employees
+
+k	25,000 to 49,999 employees
+
+m	100,000 employees or more
+
+(r)	Revised
+
+Source: U.S. Census Bureau, 2012 Economic Census, 2012 Economic Census of Island Areas, and 2012 Nonemployer Statistics.
+Note: The data in this file are based on the 2012 Economic Census, and the related programs listed above. To maintain confidentiality, the Census Bureau suppresses data to protect the identity of any business or individual. The census results in this file contain sampling and nonsampling error. Data users who create their own estimates using data from this file should cite the Census Bureau as the source of the original data only. For the full technical documentation, see Methodology link in headnote above.
+
+Symbols:D - Withheld to avoid disclosing data for individual companies; data are included in higher level totalsN - Not available or not comparableFor a complete list of all economic programs symbols, see the Symbols Glossary
+
