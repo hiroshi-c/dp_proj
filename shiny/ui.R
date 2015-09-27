@@ -1,7 +1,7 @@
 library(shiny)
 
 shinyUI(fluidPage(
-#  title = "Population growth rate in all US counties from April 2010 to July 2014",
+  title = "Population growth rate in all US counties from April 2010 to July 2014",
   titlePanel("Population growth rate in all US counties from April 2010 to July 2014"),
   
   sidebarLayout(
@@ -15,7 +15,8 @@ shinyUI(fluidPage(
       p("This is a linear regerssion model of population growth rate based on demographic and economic data."),
       p("Initial value is set the actual value of King County, Washington state, where Seattle locates."),
       p("You may modify the input data below and observe how this model changes its prediction."),
-      p("Detail explanaiton of source data and model construciton is found here: "),
+      p("Detail explanaiton of source data and model construciton is found ", 
+        a("here", href="https://cdn.rawgit.com/hiroshi-c/dp_proj/master/deck/index.html")),
       fluidRow(
         column(2,
                h3("Popluation"),
